@@ -53,7 +53,8 @@ def main():
 
     def update(val):
         nonlocal maxmin_states, kmeans_states
-        points = generate_points(int(slider_points.val), max_points_num, max_points_num)
+        points_num = int(slider_points.val)
+        points = generate_points(points_num)
         maxmin_states = maxmin_clustering(points)
         kmeans_states = kmeans_clustering(maxmin_states[-1])
         change_max_states(slider_minmax_states, maxmin_states)

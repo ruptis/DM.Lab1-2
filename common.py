@@ -116,10 +116,10 @@ def random_point(min_x, max_x, min_y, max_y):
     return Point(x, y)
 
 
-def generate_points(n, max_x, max_y):
+def generate_points(n):
     points = []
     for i in range(n):
-        point = random_point(0, max_x, 0, max_y)
+        point = random_point(0,n, 0, n)
         points.append(point)
     return points
 
